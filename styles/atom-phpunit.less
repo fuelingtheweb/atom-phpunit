@@ -12,6 +12,11 @@
     font-weight: 700;
     color: #cccccc;
     background-color: #006600;
+
+    strong {
+      color: #fff;
+      font-size: 13px;
+    }
   }
 
   .message .output {
@@ -19,7 +24,7 @@
     max-height: 40vh;
     padding: 20px;
 
-    background-color: #000000;
+    background-color: #1e2127;
 
     color: #cccccc;
     white-space: pre-wrap;
@@ -44,7 +49,32 @@
 
     .header {
       background-color: #FFF17A;
-      color: #000000;
+
+      &, strong {
+        color: #000000;
+      }
+    }
+  }
+
+  &:not(.error):not(.pending) {
+    .header {
+      font-size: 15px;
+
+      strong {
+        font-size: 16px;
+      }
+
+      span {
+        display: block;
+      }
+
+      span.divider {
+        display: none;
+      }
+    }
+
+    .message {
+      display: none;
     }
   }
 }
